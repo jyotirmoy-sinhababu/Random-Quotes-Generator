@@ -3,6 +3,7 @@ import axios from 'axios';
 
 import Display from '../../components/display/Display';
 import Header from '../../components/header/Header';
+import Loading from '../../components/loading/Loading';
 
 const Main = () => {
   const [data, setData] = useState([]);
@@ -36,7 +37,7 @@ const Main = () => {
         <Display count={count} data={data} />
       ) : (
         <div>
-          <h2>Data not Found</h2>
+          <Loading />
         </div>
       )}
     </>

@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import Loading from '../loading/Loading';
+
 import axios from 'axios';
 
 const Display = ({ data, count }) => {
@@ -57,7 +59,9 @@ const Display = ({ data, count }) => {
               );
             })
           ) : (
-            <div></div>
+            <div>
+              <Loading />
+            </div>
           )}
         </div>
       )}
