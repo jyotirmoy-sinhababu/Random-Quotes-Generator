@@ -4,9 +4,8 @@ import Loading from '../loading/Loading';
 
 import axios from 'axios';
 
-const Display = ({ data, count }) => {
+const Display = ({ data, count, isBtnOn, handleClick }) => {
   const [apiData, setApiData] = useState([]);
-  const [isBtnOn, setIsBtnOn] = useState(false);
 
   const fetchData = (name) => {
     axios
@@ -17,9 +16,6 @@ const Display = ({ data, count }) => {
       });
   };
 
-  const handleClick = () => {
-    setIsBtnOn(true);
-  };
   console.log(isBtnOn);
   console.log(apiData);
   return (

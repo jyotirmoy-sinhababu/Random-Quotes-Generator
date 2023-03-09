@@ -8,6 +8,7 @@ import Loading from '../../components/loading/Loading';
 const Main = () => {
   const [data, setData] = useState([]);
   const [count, setCount] = useState(0);
+  const [isBtnOn, setIsBtnOn] = useState(false);
 
   useEffect(() => {
     axios.get('https://quote-garden.onrender.com/api/v3/quotes').then((res) => {
@@ -26,15 +27,22 @@ const Main = () => {
     }
   };
 
-  console.log(count);
+  const handleClick = () => {
+    setIsBtnOn(true);
+  };
 
   return (
     <>
       <div>
-        <Header controlCount={controlCount} />
+        <Header controlCount={controlCount} isBtnOn={isBtnOn} />
       </div>
       {data && data.length ? (
-        <Display count={count} data={data} />
+        <Display
+          count={count}
+          data={data}
+          isBtnOn={isBtnOn}
+          handleClick={handleClick}
+        />
       ) : (
         <div>
           <Loading />
