@@ -1,14 +1,11 @@
 import React from 'react';
 
-const Display = ({ data, count }) => {
-  console.log(data[count]);
-
-  console.log(count);
+const Display = () => {
   return (
     <div>
       <div>
         <div></div>
-        {/* <div>{data[count].quoteText}</div> */}
+        <div></div>
       </div>
     </div>
   );

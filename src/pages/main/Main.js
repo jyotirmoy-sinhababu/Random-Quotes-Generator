@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 import Display from '../../components/display/Display';
+import Header from '../../components/header/Header';
 
-const Main = ({ count }) => {
+const Main = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -12,10 +13,22 @@ const Main = ({ count }) => {
       setData(res.data.data);
     });
   }, []);
-  console.log(data[count]);
-  console.log(count);
+  console.log(data);
 
-  return <>{data ? <Display data={data} /> : null}</>;
+  return (
+    <>
+      <div>
+        <Header />
+      </div>
+      {data ? (
+        <Display />
+      ) : (
+        <div>
+          <h2>Data not Found</h2>
+        </div>
+      )}
+    </>
+  );
 };
 
 export default Main;
