@@ -1,0 +1,12 @@
+.main-hd-cnt {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 150px;
+}
+
+.main-display-cnt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
+import './main.css';
+
 import Display from '../../components/display/Display';
 import Header from '../../components/header/Header';
 import Loading from '../../components/loading/Loading';
@@ -36,18 +38,20 @@ const Main = () => {
       <div className='main-hd-cnt'>
         <Header controlCount={controlCount} isBtnOn={isBtnOn} />
       </div>
-      {data && data.length ? (
-        <Display
-          count={count}
-          data={data}
-          isBtnOn={isBtnOn}
-          handleClick={handleClick}
-        />
-      ) : (
-        <div>
-          <Loading />
-        </div>
-      )}
+      <div className='main-display-cnt'>
+        {data && data.length ? (
+          <Display
+            count={count}
+            data={data}
+            isBtnOn={isBtnOn}
+            handleClick={handleClick}
+          />
+        ) : (
+          <div>
+            <Loading />
+          </div>
+        )}
+      </div>
     </>
   );
 };
