@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Header = () => {
+const Header = ({ controlCount }) => {
   return (
     <div>
       <p>random</p>
-      <button></button>
+      <button onClick={controlCount}>spin</button>
     </div>
   );
 };

@@ -6,6 +6,7 @@ import Header from '../../components/header/Header';
 
 const Main = () => {
   const [data, setData] = useState([]);
+  const [count, setCount] = useState(0);
 
   useEffect(() => {
     axios.get('https://quote-garden.onrender.com/api/v3/quotes').then((res) => {
@@ -15,13 +16,24 @@ const Main = () => {
   }, []);
   console.log(data);
 
+  const controlCount = () => {
+    if (count >= 0 && count != 9) {
+      setCount((prev) => prev + 1);
+    }
+    if (count == 9) {
+      setCount(0);
+    }
+  };
+
+  console.log(count);
+
   return (
     <>
       <div>
-        <Header />
+        <Header controlCount={controlCount} />
       </div>
-      {data ? (
-        <Display />
+      {data && data.length ? (
+        <Display count={count} data={data} />
       ) : (
         <div>
           <h2>Data not Found</h2>
