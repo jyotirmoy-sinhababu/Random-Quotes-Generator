@@ -1,14 +1,16 @@
 import React from 'react';
 
+import './header.css';
+
 const Header = ({ controlCount, isBtnOn }) => {
   return (
-    <div>
-      <p>random</p>
-      <button disabled={isBtnOn} onClick={controlCount}>
+    <div className='header-cnt'>
+      <p className='header-txt'>random</p>
+      <button className='header-btn' disabled={isBtnOn} onClick={controlCount}>
         <svg
           xmlns='http://www.w3.org/2000/svg'
-          width='16'
-          height='16'
+          width='26'
+          height='26'
           fill='currentColor'
           className='bi-arrow-repeat'
           viewBox='0 0 16 16'

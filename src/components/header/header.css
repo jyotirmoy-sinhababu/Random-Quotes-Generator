@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap');
+
+.header-cnt {
+  display: flex;
+  gap: 5px;
+  padding-top: 20px;
+}
+
+.header-txt {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 23px;
+  line-height: 120%;
+  color: #120101;
+}
+
+.header-btn {
+  border: none;
+  background-color: white;
+}
+
+.header-btn:hover {
+  rotate: -90deg;
+}
