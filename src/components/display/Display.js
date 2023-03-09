@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './display.css';
 
 import Loading from '../loading/Loading';
 
@@ -21,10 +22,14 @@ const Display = ({ data, count, isBtnOn, handleClick }) => {
   return (
     <>
       {!isBtnOn ? (
-        <div>
-          <div>
-            <div></div>
-            <div>{data ? data[count].quoteText : null}</div>
+        <div className='display-cnt'>
+          <div className='display-first-cnt'>
+            <div className='display-first-empty'></div>
+            <div className='display-first-txt-cnt'>
+              <p className='display-first-txt'>
+                {data ? data[count].quoteText : null}
+              </p>
+            </div>
           </div>
           <div>
             <p

@@ -1,0 +1,24 @@
+.display-first-cnt {
+  display: flex;
+  gap: 99px;
+  align-items: center;
+}
+
+.display-first-empty {
+  width: 8px;
+  height: 301px;
+  background: #f7df94;
+}
+
+.display-first-txt-cnt {
+  width: 300px;
+}
+
+.display-first-txt {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 120%;
+  color: #000000;
+}
