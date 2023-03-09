@@ -33,7 +33,7 @@ const Main = () => {
 
   return (
     <>
-      <div>
+      <div className='main-hd-cnt'>
         <Header controlCount={controlCount} isBtnOn={isBtnOn} />
       </div>
       {data && data.length ? (

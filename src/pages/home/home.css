@@ -1,0 +1,4 @@
+.home-cnt {
+  display: flex;
+  flex-direction: column;
+}
