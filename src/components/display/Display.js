@@ -31,8 +31,9 @@ const Display = ({ data, count, isBtnOn, handleClick }) => {
               </p>
             </div>
           </div>
-          <div>
+          <div className='display-second-cnt'>
             <p
+              className='display-second-txt-name'
               onClick={() => {
                 fetchData(data[count].quoteAuthor);
                 handleClick();
@@ -40,30 +41,37 @@ const Display = ({ data, count, isBtnOn, handleClick }) => {
             >
               {data ? data[count].quoteAuthor : null}
             </p>
-            <p>{data ? data[count].quoteGenre : null}</p>
+            <p className='display-second-txt-genre'>
+              {data ? data[count].quoteGenre : null}
+            </p>
           </div>
         </div>
       ) : (
-        <div>
-          <div>
-            <p>{data[count].quoteAuthor}</p>
+        <div className='display-author-cnt'>
+          <div className='author-name-cnt'>
+            <p className='author-name'>{data[count].quoteAuthor}</p>
           </div>
-          {apiData ? (
-            apiData.map((item) => {
-              return (
-                <div key={item.id}>
-                  <div>
-                    <div></div>
-                    <div>{item.quoteText}</div>
+          <div className='display-quotes-cnt'>
+            {' '}
+            {apiData ? (
+              apiData.map((item) => {
+                return (
+                  <div key={item.id}>
+                    <div className='display-quote'>
+                      <div className='display-empty-cnt'></div>
+                      <div className='display-author-quotes'>
+                        <p>{item.quoteText}</p>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              );
-            })
-          ) : (
-            <div>
-              <Loading />
-            </div>
-          )}
+                );
+              })
+            ) : (
+              <div>
+                <Loading />
+              </div>
+            )}
+          </div>
         </div>
       )}
     </>
