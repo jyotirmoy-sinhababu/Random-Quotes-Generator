@@ -62,7 +62,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 25px;
+  gap: 125px;
 }
 
 .display-quote {
@@ -99,4 +99,21 @@
 .author-name-cnt {
   display: flex;
   padding-left: 110px;
+}
+
+.author-name {
+  width: 164px;
+  height: 42px;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  color: #333333;
+}
+
+.display-author-cnt {
+  display: flex;
+  flex-direction: column;
+  gap: 82px;
 }

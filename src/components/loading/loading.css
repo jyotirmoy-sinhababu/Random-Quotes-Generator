@@ -1,0 +1,26 @@
+.loading-cnt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 200px;
+}
+
+.loading-txt {
+  font-size: 58px;
+  font-weight: 500;
+}
+
+.no-data-cnt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 200px;
+  gap: 40px;
+}
+
+.no-data-txt {
+  font-size: 38px;
+  font-weight: 400;
+  color: red;
+}
