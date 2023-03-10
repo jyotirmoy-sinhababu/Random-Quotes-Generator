@@ -3,3 +3,8 @@
   flex-direction: column;
   gap: 80px;
 }
+
+.home-footer-cnt {
+  display: flex;
+  justify-content: center;
+}
