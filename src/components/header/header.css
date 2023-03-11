@@ -18,6 +18,7 @@
 .header-btn {
   border: none;
   background-color: white;
+  cursor: pointer;
 }
 
 .header-btn:hover {

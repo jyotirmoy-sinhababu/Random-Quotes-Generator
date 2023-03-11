@@ -120,6 +120,22 @@
   gap: 82px;
 }
 
+.home-btn-cnt {
+  height: 70px;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
 .home-btn {
+  border: none;
   width: 60px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.home-btn:hover {
+  color: red;
 }
