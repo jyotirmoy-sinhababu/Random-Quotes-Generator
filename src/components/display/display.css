@@ -119,3 +119,7 @@
   flex-direction: column;
   gap: 82px;
 }
+
+.home-btn {
+  width: 60px;
+}

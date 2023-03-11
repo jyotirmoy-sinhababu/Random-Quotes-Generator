@@ -5,7 +5,7 @@ import Loading from '../loading/Loading';
 
 import axios from 'axios';
 
-const Display = ({ data, count, isBtnOn, handleClick }) => {
+const Display = ({ data, count, isBtnOn, setIsBtnOn, handleClick }) => {
   const [apiData, setApiData] = useState([]);
 
   const fetchData = (name) => {
@@ -51,6 +51,16 @@ const Display = ({ data, count, isBtnOn, handleClick }) => {
           <div className='author-name-cnt'>
             <p className='author-name'>{data[count].quoteAuthor}</p>
           </div>
+          <div>
+            <button
+              onClick={() => {
+                setIsBtnOn(false);
+              }}
+              className='home-btn'
+            >
+              Home page
+            </button>
+          </div>
           <div className='display-quotes-cnt'>
             {' '}
             {apiData ? (
@@ -71,6 +81,7 @@ const Display = ({ data, count, isBtnOn, handleClick }) => {
                 <Loading />
               </div>
             )}
+            <div></div>
           </div>
         </div>
       )}

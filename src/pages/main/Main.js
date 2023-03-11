@@ -44,6 +44,7 @@ const Main = () => {
             count={count}
             data={data}
             isBtnOn={isBtnOn}
+            setIsBtnOn={setIsBtnOn}
             handleClick={handleClick}
           />
         ) : (
