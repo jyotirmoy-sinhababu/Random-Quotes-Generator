@@ -14,11 +14,9 @@ const Main = () => {
 
   useEffect(() => {
     axios.get('https://quote-garden.onrender.com/api/v3/quotes').then((res) => {
-      console.log(res.data.data);
       setData(res.data.data);
     });
   }, []);
-  console.log(data);
 
   const controlCount = () => {
     if (count >= 0 && count != 9) {
