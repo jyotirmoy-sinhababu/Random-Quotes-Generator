@@ -63,13 +63,9 @@ $ npm install
 $ npm start
 ```
 
-## Acknowledgements
-
-: -->
-
-- [Steps to replicate a design with only HTML and CSS](https://devchallenges-blogs.web.app/how-to-replicate-design/)
+- [https://devchallenges-blogs.web.app/how-to-replicate-design]
 
 ## Contact
 
-- Website [your-website.com](https://relaxed-panda-0ddc0d.netlify.app)
-- GitHub [@your-username](https://github.com/jyotirmoy-sinhababu?tab=repositories)
+- Website [https://relaxed-panda-0ddc0d.netlify.app]
+- GitHub [(https://github.com/jyotirmoy-sinhababu?tab=repositories)]
